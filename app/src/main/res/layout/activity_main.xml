@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/lovely"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            android:text="Maps"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#F4FA58" />
+
+        // Fragment dùng để load file xmls ra màn hình và Fragment cũng là 1 view nên có id.//
+
+
+        // khác biệt giữa include và fragment
+        //.. include load file xmls nhưng ko load cả code
+        //.. Fragment load file xmls và load code nên có thể dùng 1 fragment cho nhiều activity
+        <fragment
+            android:id="@+id/fragment_input"
+            android:name="com.yostajsc.mymaps.InputFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/layout_input"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:gravity="center"
+            android:id="@+id/text_login"
+            android:background="#81F7F3"/>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
